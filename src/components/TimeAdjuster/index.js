@@ -2,7 +2,7 @@ import React from 'react';
 import {canChangeTime} from '../../util/functions';
 
 const TimeAdjuster = ({incrementValue, timerData}) => {
-      const {setIsChangingTime, setBegunChangingTime, isCounting, minTimeRemaining, timeRemaining, maxTimeRemaining, setTimeRemaining} = timerData;
+      const {setIsChangingTime, setBegunChangingTime, isCounting, minTimeRemaining, timeRemaining, maxTimeRemaining} = timerData;
   
     return (
         <button
