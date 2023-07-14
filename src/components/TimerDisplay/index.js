@@ -35,7 +35,7 @@ return (
       timerData={props}>
       </TimeAdjuster>
       <TimeAdjuster
-      incrementValue={(1)}
+      incrementValue={(-1)}
       timerData={props}>
       </TimeAdjuster>
   </div>
