@@ -10,7 +10,7 @@ function App() {
   const maxTimeRemaining = useRef(99 * 60 * 60 + 59 * 60 + 59);
   const instructions = useRef({
       text: [
-        "Hold down the arrow buttons to adjust the duration of your meditation by seconds, minutes, or hours."
+        "Press the + and - buttons to adjust the duration of your meditation by seconds, minutes, or hours."
       ],
       verse_duration: 99 * 60 * 60,
       utterances: []
