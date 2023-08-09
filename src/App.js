@@ -4,13 +4,16 @@ import TimerButton from './components/TimerButton';
 import TimerDisplay from './components/TimerDisplay';
 import PrayerSelector from './components/PrayerSelector';
 import {canChangeTime} from './util/functions';
+import sound from './assets/old-church-bell-6298.mp3';
 
 function App() {
+  const bell = new Audio(sound);
   const synth = useRef(window.speechSynthesis);
+  const bellRef = useRef(bell);
   const maxTimeRemaining = useRef(99 * 60 * 60 + 59 * 60 + 59);
   const instructions = useRef({
       text: [
-        "Press the + and - buttons to adjust the duration of your meditation by seconds, minutes, or hours."
+        "Hold down the + and - buttons to adjust the duration of your meditation by seconds, minutes, or hours."
       ],
       verse_duration: 99 * 60 * 60,
       utterances: []
@@ -30,6 +33,7 @@ function App() {
   useEffect(() => {
     if (timeRemaining <= 0) {
       setIsCounting(false);
+      bell.play();
     }
   },[timeRemaining]);
   
