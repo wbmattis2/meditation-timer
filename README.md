@@ -1,4 +1,4 @@
-# meditation-timer
+# Text-2-Spirit
 A meditation timer made with React, Bible API, and Web Speech API
 by Benny Mattis
 
