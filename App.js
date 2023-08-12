@@ -7,7 +7,7 @@ import {canChangeTime} from './util/functions';
 import sound from './assets/old-church-bell-6298.mp3';
 
 function App() {
-  const bell = useMemo(new Audio(sound));
+  const bell = useMemo(() => new Audio(sound), []);
   const synth = useRef(window.speechSynthesis);
   const maxTimeRemaining = useRef(99 * 60 * 60 + 59 * 60 + 59);
   const instructions = useRef({
