@@ -34,7 +34,7 @@ function App() {
       setIsCounting(false);
       bell.play();
     }
-  },[timeRemaining]);
+  },[timeRemaining, bell]);
   
   //While isCounting is true, advance the timer one second at a time
   useEffect(() => {
